@@ -1,0 +1,16 @@
+<h1>Welcome to BBQ Partayz!</h1>
+
+<% if user_signed_in? %>
+	
+
+	<%= link_to "View BBQ's", root_path %>
+	
+
+<% else %>
+	<br>
+	<%= link_to "Log In", new_user_session_path %>
+	<br>
+	<br>      
+	<%= link_to "Sign Up", new_user_registration_path %>
+
+<% end %>

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'barbecues#index'
+  devise_for :users
+  root 'users#home'
 
+  resources :users, only: [:show]
   resources :barbecues, only: [ :index, :show, :new, :create ]
 end
